@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo of the [lograge_rails_request_queuing](https://github.com/rud/lograge_rails_request_queuing) gem.
 
-Things you may want to cover:
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* Ruby version
+Once deployed, you can see the logs by tailing:
 
-* System dependencies
+``` shell-interaction
+heroku logs --source=app -t
+2018-06-29T17:17:18.218922+00:00 app[web.1]: I, [2018-06-29T17:17:18.218788 #4]  INFO -- : [03a9647d-8068-4fe3-8734-79ae02c63480] method=GET path=/echo format=html controller=EchoController action=index status=200 duration=0.46 view=0.26 rq=2.43ms
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Notice the `rq=2.43ms` at the end of the line. Success!
