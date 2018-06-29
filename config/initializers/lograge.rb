@@ -18,9 +18,7 @@ Rails.application.configure do
     custom_options
   end
 
-  class ActionDispatch::DebugExceptions
-    def log_error *_args
-      # pass
-    end
-  end
+  ActionDispatch::DebugExceptions.prepend(
+    LogrageRailsRequestQueuing::SilenceExceptionLogging
+  )
 end
