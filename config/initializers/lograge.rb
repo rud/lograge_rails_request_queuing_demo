@@ -8,7 +8,7 @@ Rails.application.configure do
     custom_options = {}
 
     queued_ms = RequestStore[:lograge_request_queueing].queued_ms
-    custom_options[:rq] = queued_ms.round(2) if queued_ms
+    custom_options[:rq] = "#{queued_ms.round(2)}ms" if queued_ms
 
     if event.payload[:exception_object]
       custom_options[:exception] = event.payload[:exception]
