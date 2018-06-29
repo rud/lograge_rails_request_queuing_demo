@@ -10,10 +10,9 @@ Rails.application.configure do
     queued_ms = RequestStore[:lograge_request_queueing].queued_ms
     custom_options[:rq] = "#{queued_ms.round(2)}ms" if queued_ms
 
-    if event.payload[:exception_object]
-      custom_options[:exception] = event.payload[:exception]
-      custom_options[:backtrace] = Array(event.payload[:exception_object].backtrace)
-    end
+    LogrageRailsRequestQueuing::ExceptionDetails.add_any_exception!(
+      event, custom_options
+    )
 
     custom_options
   end
