@@ -1,5 +1,5 @@
 {
-  "name": "lograge_rails_request_queuing demo",
+  "name": "lograge_rails_request_queuing",
   "description": "lograge_rails_request_queuing adds request queueing time to Rails logging output",
   "repository": "https://github.com/rud/lograge_rails_request_queuing_demo",
   "keywords": ["rails", "lograge", "lograge_rails_request_queuing"]
