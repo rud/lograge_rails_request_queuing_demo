@@ -17,8 +17,4 @@ Rails.application.configure do
 
     custom_options
   end
-
-  if Rails.env.production?
-    Rails.application.middleware.delete(ActionDispatch::DebugExceptions)
-  end
 end
