@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/rud/lograge_rails_request_queuing
+  revision: 67faee914a97477cdba00d3409f53b283320f777
+  specs:
+    lograge_rails_request_queuing (0.1.0)
+      lograge
+      rails (~> 5.2.0)
+      request_store
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,6 +89,11 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
+    lograge (0.10.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -130,6 +144,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    request_store (1.4.1)
+      rack (>= 1.4)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.5.6)
@@ -184,6 +200,7 @@ DEPENDENCIES
   chromedriver-helper
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  lograge_rails_request_queuing!
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
