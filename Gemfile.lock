@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rud/lograge_rails_request_queuing
-  revision: 50a2b4648e2f5a6af97fe023fc6a7cdcad195d75
+  revision: 6e44c1eb417fb6be1b9be01e0eeaf51ae8bdf75c
   specs:
     lograge_rails_request_queuing (0.1.0)
       lograge
